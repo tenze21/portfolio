@@ -47,9 +47,9 @@
       color: var(--color-primary);
       background-color: transparent;
       font-weight: 700;
-      padding: 8px 25px;
-      border: 1px solid rgb(34 197 94 / 0.5);
-      border-radius: 8px;
+      padding: var(--button-padding);
+      border: 1px solid var(--button-border);
+      border-radius: var(--button-radius);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -57,7 +57,7 @@
       transition: transform 0.25s ease;
       &:hover {
         cursor: pointer;
-        background-color: rgb(34 197 94 / 0.1);
+        background-color: var(--button-background-light);
         transform: scale(1.1);
         box-shadow:
           inset 0 -2em 2em rgb(34 197 94 / 10%),
@@ -65,4 +65,86 @@
       }
     }
   }
+}
+
+.banner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  margin-top: 2.5rem;
+  .banner-word{
+    width: 55%;
+    .name{
+      font-size: var(--size-header-text);
+      color: var(--color-primary);
+      border: solid 1px var(--button-border);
+      width: fit-content;
+      padding: .3rem 1.5rem;
+      background-color: var(--button-background-light);
+      border-radius: 2rem;
+    }
+    .banner-text-main{
+      color: var(--color-primary);
+      font-size: var(--size-banner-text);
+      font-weight: 700;
+      margin: 2rem 0 3rem 0;
+      h2:first-child{
+        color: var(--text-w);
+      }
+    }
+  }
+  p{
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  .banner-actions{
+    margin-top: 1.5rem;
+    button{
+      border: solid 1px var(--button-border);
+      border-radius: var(--button-radius);
+      background-color: transparent;
+      padding: var(--button-padding);
+      color: var(--color-primary);
+      font-weight: 700;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      &:hover{
+        transform: scale(1.1);
+        background-color: var(--button-background-light);
+        box-shadow:
+          inset 0 -2em 2em rgb(34 197 94 / 10%),
+          0.2em 0.2em .5em rgb(34 197 94 / 20%);
+      }
+      &:first-child{
+        background-color: var(--button-background-dark);
+        color: var(--text-w);
+        &:hover{
+          background-color: var(--button-dark-hover);
+        }
+      }
+    }
+    display: flex;
+    gap: 1rem;
+  }
+  .banner-img{
+    /* border-radius: 100%; */
+    animation: float 2s ease-in-out infinite alternate;
+    img{
+      display: block;
+      border: 2px solid rgb(34 197 94 / 40%);
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 2rem rgb(34 197 94 / 35%),
+        0 0 4rem rgb(34 197 94 / 20%);
+    }
+  }
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-10px); }
 }

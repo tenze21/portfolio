@@ -38,10 +38,17 @@
 :root {
   --color-primary: #22c55e;
   --text-w: #fff;
-  --bg: #000;
-  --size-banner-text: 1rem;
+  --bg: #16171d;
+  --size-banner-text: 2.1rem;
   --size-header-text: 1rem;
   --size-body-text: 0.875rem;
+  --button-border: rgb(34 197 94 / 0.5);
+  --button-background-light: rgb(34 197 94 / 0.1);
+  --button-background-dark: #22c55e;
+  --button-dark-hover: #00AA3F;
+  --button-padding: .5rem 1.56rem;
+  --button-radius: .5rem;
+  --text-gray: #a3a3a3;
   --font-important: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-regular: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; 
 
@@ -72,4 +79,6 @@
 
 html{
   background-color: var(--bg);
+  font-family: var(--font-important);
+  cursor: default;
 }
