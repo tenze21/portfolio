@@ -111,11 +111,15 @@
   .banner-actions {
     margin-top: 1.5rem;
     button {
+      a{
+        text-decoration: none;
+        color: white;
+      }
+      color: var(--color-primary);
       border: solid 1px var(--button-border);
       border-radius: var(--button-radius);
       background-color: transparent;
       padding: var(--button-padding);
-      color: var(--color-primary);
       font-weight: 700;
       transition: all 0.25s ease;
       cursor: pointer;
@@ -220,7 +224,7 @@
       align-items: center;
       gap: 1rem;
       padding: 1rem 0.5rem;
-      width: 8rem;
+      width: 7rem;
       border: solid 1px rgb(119 119 119 /0.8);
       border-radius: 0.5rem;
       cursor: pointer;
@@ -230,12 +234,103 @@
         background-color: rgb(255 255 255 /0.1);
       }
       img {
-        width: 3rem;
-        height: 3rem;
+        width: 2rem;
+        height: 2rem;
       }
     }
   }
 }
+
+.featured-projects {
+  margin-block-start: 10rem;
+  max-inline-size: 70rem;
+  margin-inline: auto;
+
+  h2 {
+    color: var(--color-primary);
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-block-end: 2rem;
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--button-border);
+  border-radius: 1rem;
+  overflow: hidden;
+
+  .card-media{
+    overflow: hidden;
+  }
+  img {
+    flex: 1 1 10rem;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .card-body {
+    flex: 2 1 16rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+
+    h3 {
+      font-size: 1.25rem;
+      color: white;
+    }
+    p{
+      color: var(--text-gray);
+    }
+  }
+
+  .meta {
+    margin-block-start: auto;
+    font-size: 0.75rem;
+    opacity: 0.7;
+  }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .project-card .card-media img {
+    transition: transform 0.4s ease;
+  }
+
+  .project-card:hover .card-media img,
+  .project-card:focus-within .card-media img {
+    transform: scale(1.08);
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    font-size: 0.75rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 999px;
+    color: var(--color-primary);
+    border: 1px solid color-mix(in srgb, var(--color-primary) 40%, transparent);
+    background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  }
+}
+
 @keyframes float {
   from {
     transform: translateY(0);

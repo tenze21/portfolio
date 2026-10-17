@@ -16,6 +16,7 @@ export default function Technology() {
     <section
       aria-label="Programming languages and frameworks I am familiar with"
       className="technology"
+      id="techstack"
     >
       <h2>Technologies</h2>
       <div className="logos">
@@ -24,7 +25,7 @@ export default function Technology() {
           <p>Javascript</p>
         </div>
         <div>
-          <img src={ts} alt="" style={{height: "3rem", width: "3.5rem"}}/>
+          <img src={ts} alt="" style={{height: "2rem", width: "2.5rem"}}/>
           <p>Typescript</p>
         </div>
         <div>

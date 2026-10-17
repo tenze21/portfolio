@@ -81,6 +81,7 @@ html{
   background-color: var(--bg);
   font-family: var(--font-important);
   cursor: default;
+  scroll-behavior: smooth;
 }
 main{
   padding: 0 5rem;

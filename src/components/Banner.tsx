@@ -11,7 +11,7 @@ export default function Banner(){
                 </div>
                 <p>Specializing in fullstack DApp development, smart contract development and security.</p>
                 <div className="banner-actions">
-                    <button>View Projects</button>
+                    <button><a href="#projects">View Projects</a></button>
                     <button>Download CV</button>
                 </div>
             </div>
