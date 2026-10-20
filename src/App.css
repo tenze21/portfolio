@@ -1,5 +1,5 @@
 .nav-bar {
-  padding: 1rem 2rem;
+  padding: .5rem 2rem;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -111,7 +111,7 @@
   .banner-actions {
     margin-top: 1.5rem;
     button {
-      a{
+      a {
         text-decoration: none;
         color: white;
       }
@@ -268,7 +268,7 @@
   border-radius: 1rem;
   overflow: hidden;
 
-  .card-media{
+  .card-media {
     overflow: hidden;
   }
   img {
@@ -286,12 +286,12 @@
     padding: 1.25rem;
     font-size: 0.875rem;
     line-height: 1.5;
-
+    font-family: var(--font-regular);
     h3 {
       font-size: 1.25rem;
       color: white;
     }
-    p{
+    p {
       color: var(--text-gray);
     }
   }
@@ -300,16 +300,20 @@
     margin-block-start: auto;
     font-size: 0.75rem;
     opacity: 0.7;
-  }
-}
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .project-card .card-media img {
-    transition: transform 0.4s ease;
-  }
-
-  .project-card:hover .card-media img,
-  .project-card:focus-within .card-media img {
-    transform: scale(1.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      text-decoration: none;
+      color: var(--text-gray);
+      transition: all 0.25s ease;
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
   }
 }
 
@@ -328,6 +332,235 @@
     color: var(--color-primary);
     border: 1px solid color-mix(in srgb, var(--color-primary) 40%, transparent);
     background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  }
+}
+
+.achievements {
+  margin-top: 7rem;
+  h2 {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .card-media {
+    img {
+      flex: 1 1 10rem;
+      object-fit: cover;
+      object-position: top;
+      width: 5rem;
+    }
+  }
+
+  .certs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* or flex-start to left-align */
+    gap: 1.5rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .achievement-card {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 100%; /* never overflow on narrow screens */
+    padding: 1rem;
+    border: 1px solid rgb(119 119 119 / 0.8);
+    border-radius: 1rem;
+    h3 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: var(--text-gray);
+      font-family: var(--font-regular);
+    }
+    .card-media {
+      flex-shrink: 0;
+      img {
+        display: block; /* removes the inline-image baseline gap */
+        width: 5rem;
+        aspect-ratio: 1;
+        object-fit: contain;
+        transition: all 0.25s ease;
+      }
+    }
+  }
+}
+
+.contact {
+  margin-top: 7rem;
+  .header {
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 3rem;
+  }
+  p {
+    color: var(--text-gray);
+  }
+  .sub-header {
+    text-align: center;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 3.5rem;
+  align-items: start;
+  max-width: 75rem;
+  margin-inline: auto;
+  padding: 2rem;
+  color: #e6e6e6;
+  h3 {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  .info-list {
+    list-style: none;
+    .info-item {
+      margin-bottom: 1rem;
+      .icon {
+        width: 2rem;
+        background-color: var(--color-primary);
+        border-radius: 50%;
+        padding: 0.5rem;
+        flex-shrink: 0;
+      }
+    }
+  }
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    p {
+      color: #e6e6e6;
+      font-weight: 600;
+    }
+    a {
+      text-decoration: none;
+      color: var(--text-gray);
+      transition: all 0.25s ease;
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+    .text-gray {
+      color: var(--text-gray);
+      font-weight: normal;
+    }
+  }
+}
+
+.contact__sidebar {
+  display: grid;
+  gap: 1rem;
+  h3 {
+    margin-bottom: 1rem;
+  }
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 2rem;
+  .span-all {
+    grid-column: 1 / -1;
+  }
+  .form-field {
+    display: grid;
+    gap: 0.5rem;
+    label {
+      font-weight: 700;
+      font-family: var(--font-regular);
+    }
+    input,
+    textarea {
+      background-color: transparent;
+      border: solid 1px rgb(119 119 119 /0.8);
+      border-radius: 0.5rem;
+      padding: .5rem;
+      color: white;
+      resize: none;
+      &:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px rgb(34 197 94 / 0.25);
+      }
+    }
+    input {
+      height: 2.5rem;
+    }
+  }
+  .btn {
+    justify-self: start;
+    background-color: var(--color-primary);
+    border: none;
+    padding: .8rem 1rem;
+    color: white;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    &:hover{
+      background-color: var(--button-dark-hover);
+    }
+    &:disabled{
+      cursor: not-allowed;
+      opacity: .7;
+    }
+  }
+}
+.card {
+  background: #1c1c1cd7;
+  border-radius: 1rem;
+  padding: 2rem 2rem 1.5rem 2rem;
+  border: solid 1px rgb(119 119 119 /0.8);
+}
+.socials {
+  display: flex;
+  gap: 1.5rem;
+  a {
+    padding: 0.8rem;
+    background-color: #252525d7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    &:hover {
+      background-color: var(--color-primary);
+      transform: scale(1.1);
+      transform: translateY(-0.2rem);
+    }
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .project-card .card-media img {
+    transition: transform 0.4s ease;
+  }
+
+  .project-card:hover .card-media img,
+  .project-card:focus-within .card-media img {
+    transform: scale(1.08);
+  }
+
+  .achievement-card:hover .card-media img,
+  .achievement-card:focus-within .card-media img {
+    transform: scale(1.08);
+  }
+  .achievement-card:hover {
+    background-color: rgb(255 255 255 /0.1);
   }
 }
 

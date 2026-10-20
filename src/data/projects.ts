@@ -20,6 +20,7 @@ export const projects = [
       "Sepolia",
     ],
     period: "Spring semester, 2026",
+    repo: "https://github.com/tenze21/chainsure.git"
   },
   {
     title: "Verifiable Document Issuer",
@@ -38,6 +39,7 @@ export const projects = [
       "Sepolia",
     ],
     period: "Spring semester, 2025",
+    repo: "https://github.com/tenze21/Cryptographic_verifiable_document_issuer.git"
   },
   {
     title: "BitMart",
@@ -54,7 +56,8 @@ export const projects = [
       "Solidity",
       "Sepolia",
     ],
-    period: "Sping semester, 2025"
+    period: "Sping semester, 2025",
+    repo: "https://github.com/tenze21/BitMart.git"
   },
   {
     title: "Homestay Booking",
@@ -66,6 +69,7 @@ export const projects = [
       "Node.js/Express",
       "PostgreSQL",
     ],
-    period: "Autumn semester, 2024"
+    period: "Autumn semester, 2024",
+    repo: "https://github.com/tenze21/homestay-booking-app-.git"
   }
 ];

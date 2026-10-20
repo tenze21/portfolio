@@ -12,9 +12,6 @@ export default function Header() {
           <a href="#about">About</a>
         </li>
         <li className="nav-item">
-          <a href="#skills">Skills</a>
-        </li>
-        <li className="nav-item">
           <a href="#techstack">Techstack</a>
         </li>
         <li className="nav-item">

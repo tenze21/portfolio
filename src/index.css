@@ -79,7 +79,7 @@
 
 html{
   background-color: var(--bg);
-  font-family: var(--font-important);
+  font-family: var(--font-regular);
   cursor: default;
   scroll-behavior: smooth;
 }
