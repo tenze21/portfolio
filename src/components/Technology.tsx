@@ -1,6 +1,5 @@
 import js from "../assets/js.png";
 import ts from "../assets/ts.png";
-import java from "../assets/java.png";
 import solidity from "../assets/solidity.svg";
 import c from "../assets/c.svg";
 import react from "../assets/react.png";
