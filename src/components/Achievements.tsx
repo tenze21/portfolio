@@ -7,7 +7,7 @@ export default function Achievements(){
             <h2 id="achievement_header">Achievements</h2>
             <div className="certs">
                 {achievements.map((cert)=>(
-                    <AchievementCard title={cert.title} image={cert.image} issuer={cert.issuer} date={cert.date}/>
+                    <AchievementCard key={cert.title} title={cert.title} image={cert.image} issuer={cert.issuer} date={cert.date}/>
                 ))}
             </div>
         </section>
