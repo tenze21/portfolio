@@ -24,7 +24,7 @@ export default function Header() {
           <a href="#contact" className="nav-link">Contact</a>
         </li>
         <li>
-          <a className="cv-button" href="/cv.pdf" download="tenzin_choda_cv.pdf">
+          <a className="cv-button" href="/tenzin_choda_cv.pdf" download="tenzin_choda_cv.pdf">
             <FiDownload color="#22c55e" /> <span>CV</span>
           </a>
         </li>
