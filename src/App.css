@@ -19,7 +19,7 @@
     li {
       color: var(--color-primary);
       position: relative;
-      a {
+      .nav-link {
         color: var(--text-w);
         text-decoration: none;
         font-weight: 700;
@@ -52,7 +52,8 @@
       font-size: 2rem;
       margin-right: auto;
     }
-    button {
+    .cv-button {
+      text-decoration: none;
       color: var(--color-primary);
       background-color: transparent;
       font-weight: 700;
@@ -110,7 +111,8 @@
   }
   .banner-actions {
     margin-top: 1.5rem;
-    button {
+    button, .cv-button {
+      text-decoration: none;
       a {
         text-decoration: none;
         color: white;

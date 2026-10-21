@@ -12,7 +12,7 @@ export default function Banner(){
                 <p>Specializing in fullstack DApp development, smart contract development and security.</p>
                 <div className="banner-actions">
                     <button><a href="#projects">View Projects</a></button>
-                    <button>Download CV</button>
+                    <a href="/cv.pdf" download="tenzin_choda_cv.pdf" className="cv-button">Download CV</a>
                 </div>
             </div>
             <div className="banner-img">
